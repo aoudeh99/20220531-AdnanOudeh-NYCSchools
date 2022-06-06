@@ -31,14 +31,17 @@ class MainActivity : AppCompatActivity(), OnSchoolClicked {
         super.onCreate(savedInstanceState)
         bindingMain = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingMain.root)
+
+
+        initializeRecyclerView()
+        initObservables()
+
+        viewModel.getSchoolList()
     }
 
     override fun onResume() {
         super.onResume()
 
-        initializeRecyclerView()
-        initObservables()
-        viewModel.getSchoolList()
     }
 
     private fun initializeRecyclerView() {

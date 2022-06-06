@@ -50,6 +50,5 @@ class NYCViewModelTest {
         assertEquals(successTest.response.size, 1)
 
     }
-    
 
 }
